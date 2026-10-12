@@ -1,0 +1,92 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Class Diagram" id="d1">
+    <mxGraphModel dx="1414" dy="721" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Smart Career &amp; Job Portal — UML Class Diagram" vertex="1">
+          <mxGeometry height="40" width="560" x="260" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cand" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;" value="Candidate" vertex="1">
+          <mxGeometry height="140" width="220" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cand_b" parent="cand" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;whiteSpace=wrap;" value="- name: String&#xa;- email: String&#xa;- skills: String&#xa;+ getName()&#xa;+ getEmail()" vertex="1">
+          <mxGeometry height="110" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="view" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;" value="CandidateView" vertex="1">
+          <mxGeometry height="60" width="220" x="440" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="view_b" parent="view" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;whiteSpace=wrap;" value="+ displayCandidate()" vertex="1">
+          <mxGeometry height="30" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;" value="CandidateController" vertex="1">
+          <mxGeometry height="120" width="220" x="840" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_b" parent="ctrl" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;whiteSpace=wrap;" value="- model: Candidate&#xa;- view: CandidateView&#xa;+ updateCandidate()&#xa;+ showCandidate()" vertex="1">
+          <mxGeometry height="90" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="js" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;" value="JobService" vertex="1">
+          <mxGeometry height="80" width="220" x="40" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="js_b" parent="js" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;whiteSpace=wrap;" value="+ searchJobs()&#xa;+ applyForJob()" vertex="1">
+          <mxGeometry height="50" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cv" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;" value="CVService" vertex="1">
+          <mxGeometry height="80" width="220" x="440" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="cv_b" parent="cv" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;whiteSpace=wrap;" value="+ verifyCV()&#xa;+ recommendJobs()" vertex="1">
+          <mxGeometry height="50" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pf" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;" value="PortalFacade" vertex="1">
+          <mxGeometry height="120" width="220" x="840" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="pf_b" parent="pf" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;whiteSpace=wrap;" value="- jobService&#xa;- cvService&#xa;+ prepareCareerProfile()&#xa;+ applyAndNotify()" vertex="1">
+          <mxGeometry height="90" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="log" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;" value="PortalLogger" vertex="1">
+          <mxGeometry height="100" width="220" x="40" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="log_b" parent="log" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;whiteSpace=wrap;" value="- INSTANCE&#xa;+ getInstance()&#xa;+ log()" vertex="1">
+          <mxGeometry height="70" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nf" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;" value="NotificationFactory" vertex="1">
+          <mxGeometry height="60" width="220" x="340" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="nf_b" parent="nf" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;whiteSpace=wrap;" value="+ createNotification(type)" vertex="1">
+          <mxGeometry height="30" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="not" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;" value="Notification" vertex="1">
+          <mxGeometry height="80" width="220" x="640" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="not_b" parent="not" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;whiteSpace=wrap;" value="&lt;&lt;interface&gt;&gt;&#xa;+ send()" vertex="1">
+          <mxGeometry height="50" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="cand" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#666666;strokeWidth=2;html=1;fontSize=12;labelBackgroundColor=#ffffff;" target="ctrl" value="uses model">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="270" />
+              <mxPoint x="950" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="ctrl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#666666;strokeWidth=2;html=1;fontSize=12;" target="view" value="updates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="js" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#666666;strokeWidth=2;html=1;fontSize=12;" target="pf">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="520" />
+              <mxPoint x="950" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="cv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#666666;strokeWidth=2;html=1;fontSize=12;" target="pf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="nf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#666666;strokeWidth=2;html=1;fontSize=12;dashed=1;" target="not" value="creates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
